@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 2 - Eventos JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="titulo-principal">Eventos JavaScript</h1>
+        <p class="descripcion">Laboratorio 2 - Interacción con el DOM</p>
+    </header>
 
+    <main>
+        <!-- Sección de eventos de click -->
+        <section class="seccion" id="seccion-click">
+            <h2 class="subtitulo">Eventos de Click</h2>
+            <div class="contenedor-eventos">
+                <div class="evento-card" id="click-card">
+                    <span class="evento-titulo">EVENTO AQUÍ</span>
+                    <button class="evento-boton" id="btn-click">Click aqui</button>
+                    <p class="evento-resultado" id="click-resultado">Esperando click...</p>
+                </div>
+
+                <div class="evento-card" id="dblclick-card">
+                    <span class="evento-titulo">EVENTO AQUÍ</span>
+                    <button class="evento-boton" id="btn-dblclick">Double-click aqui</button>
+                    <p class="evento-resultado" id="dblclick-resultado">Esperando doble click...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de eventos de mouse -->
+        <section class="seccion" id="seccion-mouse">
+            <h2 class="subtitulo">Eventos de Mouse</h2>
+            <div class="contenedor-eventos">
+                <div class="evento-card" id="hover-card">
+                    <span class="evento-titulo">EVENTO AQUÍ</span>
+                    <div class="evento-area" id="hover-area">
+                        mover el mause
+                    </div>
+                    <p class="evento-resultado" id="hover-resultado">Esperando mouse...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de eventos de teclado -->
+        <section class="seccion" id="seccion-teclado">
+            <h2 class="subtitulo">Eventos de Teclado</h2>
+            <div class="contenedor-eventos">
+                <div class="evento-card" id="keydown-card">
+                    <span class="evento-titulo">EVENTO AQUÍ</span>
+                    <input type="text" class="evento-input" id="keydown-input" placeholder="presiona una tecla">
+                    <p class="evento-resultado" id="keydown-resultado">Esperando tecla...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de eventos de foco -->
+        <section class="seccion" id="seccion-foco">
+            <h2 class="subtitulo">Eventos de Foco</h2>
+            <div class="contenedor-eventos">
+                <div class="evento-card" id="focus-card">
+                    <span class="evento-titulo">EVENTO AQUÍ</span>
+                    <input type="text" class="evento-input" id="focus-input" placeholder="Focus on">
+                    <p class="evento-resultado" id="focus-resultado">Esperando foco...</p>
+                </div>
+
+                <div class="evento-card" id="blur-card">
+                    <span class="evento-titulo">EVENTO AQUÍ</span>
+                    <input type="text" class="evento-input" id="blur-input" placeholder="Leave input">
+                    <p class="evento-resultado" id="blur-resultado">Esperando blur...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de eventos de formulario -->
+        <section class="seccion" id="seccion-formulario">
+            <h2 class="subtitulo">Eventos de Formulario</h2>
+            <div class="contenedor-eventos">
+                <div class="evento-card" id="submit-card">
+                    <span class="evento-titulo">EVENTO AQUÍ</span>
+                    <form id="demo-form">
+                        <input type="text" class="evento-input" id="form-input" placeholder="Escribe algo...">
+                        <button type="submit" class="evento-boton">escriba algo</button>
+                    </form>
+                    <p class="evento-resultado" id="submit-resultado">Esperando submit...</p>
+                </div>
+
+                <div class="evento-card" id="change-card">
+                    <span class="evento-titulo">EVENTO AQUÍ</span>
+                    <select class="evento-select" id="change-select">
+                        <option value="">Selecciona una opción</option>
+                        <option value="opcion1">Opción 1</option>
+                        <option value="opcion2">Opción 2</option>
+                        <option value="opcion3">Opción 3</option>
+                    </select>
+                    <p class="evento-resultado" id="change-resultado">Esperando cambio...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de ejemplos de la imagen de eventos -->
+        <section class="seccion" id="seccion-eventos">
+            <h2 class="subtitulo">Calendario de Eventos</h2>
+            <div class="calendario-eventos">
+                <div class="evento-item" style="border-left-color: #46467A;">
+                    <div class="evento-fecha">
+                        <span class="evento-dia">28</span>
+                        <span class="evento-mes">May</span>
+                    </div>
+                    <div class="evento-detalle">
+                        <h3>Wine Tasting</h3>
+                        <p>Metropolitan Pavilion</p>
+                        <small>07:30PM - 09:00PM</small>
+                    </div>
+                </div>
+
+                <div class="evento-item" style="border-left-color: #7766C6;">
+                    <div class="evento-fecha">
+                        <span class="evento-dia">02</span>
+                        <span class="evento-mes">Jun</span>
+                    </div>
+                    <div class="evento-detalle">
+                        <h3>Vegetarian Food Fest</h3>
+                        <p>Chelsea Market</p>
+                        <small>11:00AM - 08:00PM</small>
+                    </div>
+                </div>
+
+                <div class="evento-item" style="border-left-color: #FFC212;">
+                    <div class="evento-fecha">
+                        <span class="evento-dia">08</span>
+                        <span class="evento-mes">Jun</span>
+                    </div>
+                    <div class="evento-detalle">
+                        <h3>Sunday Food Market</h3>
+                        <p>Central Park</p>
+                        <small>08:00AM - 08:00PM</small>
+                    </div>
+                </div>
+
+                <div class="evento-item" style="border-left-color: #F9B0C3;">
+                    <div class="evento-fecha">
+                        <span class="evento-dia">25</span>
+                        <span class="evento-mes">May</span>
+                    </div>
+                    <div class="evento-detalle">
+                        <h3>Pie Baking Class</h3>
+                        <p>The City Bakery</p>
+                        <small>01:00PM - 03:00PM</small>
+                    </div>
+                </div>
+
+                <div class="evento-item" style="border-left-color: #46467A;">
+                    <div class="evento-fecha">
+                        <span class="evento-dia">28</span>
+                        <span class="evento-mes">May</span>
+                    </div>
+                    <div class="evento-detalle">
+                        <h3>Ice Cream Making Class</h3>
+                        <p>The Cooking Place</p>
+                        <small>11:00AM - 02:00PM</small>
+                    </div>
+                </div>
+
+                <div class="evento-item" style="border-left-color: #7766C6;">
+                    <div class="evento-fecha">
+                        <span class="evento-dia">08</span>
+                        <span class="evento-mes">Jun</span>
+                    </div>
+                    <div class="evento-detalle">
+                        <h3>NYC Food Festival</h3>
+                        <p>Central Park</p>
+                        <small>10:00AM - 09:00PM</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Programación Computacional IV | Laboratorio 2</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
